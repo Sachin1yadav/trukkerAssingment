@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import UserTable from "../../component/TableComponent/Table";
 
-import AddUserDrawer from "../AddDriver/AddDriverModal";
-import { FaPlus } from "react-icons/fa6";
+ import { FaPlus } from "react-icons/fa6";
+import AddUserDrawer from "../AddUser/AddUserModal";
 
 const Home = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -32,7 +32,7 @@ const Home = () => {
         <div>User List</div>
 
         <button
-          className="btn btn-success add-driver-button"
+          className="btn btn-success add-user-button"
           onClick={handleOpenDrawer}
         >
           <FaPlus

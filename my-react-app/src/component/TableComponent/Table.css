@@ -19,7 +19,8 @@
 }
 
 .example-table tbody tr:hover {
-  background-color: #ddd;
+  background-color: #f6f5f5;
+  cursor: pointer;
 }
 
 .nodata {

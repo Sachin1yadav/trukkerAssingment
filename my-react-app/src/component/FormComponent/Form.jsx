@@ -146,11 +146,11 @@ const FormComponent = ({ handleClose, updateTableData }) => {
               required: "Mobile Number is required",
             })}
           />
-          {errors.mobileNumber && (
+          
+        </div>
+        {errors.mobileNumber && (
             <span className="error">{errors.mobileNumber.message}</span>
           )}
-        </div>
-
         <div className="mb-3 ">
           <label htmlFor="selectRole" className="form-label">
             Role {<span className="error">*</span>}

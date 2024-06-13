@@ -50,6 +50,7 @@ const FormComponent = ({ handleClose,updateTableData  }) => {
 
   const handleCancel = () => {
     reset();
+    handleClose();
   };
 
   return (

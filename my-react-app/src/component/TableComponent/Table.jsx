@@ -25,7 +25,11 @@ const UserTable = ({ tableData, updateTableData }) => {
         <tbody>
           {tableData?.map((item, index) => (
             <tr key={index}>
-              <td>{item?.status || ""}</td>
+              <td>
+                <div className="status">
+                {item?.status || ""}
+                </div>
+              </td>
               <td>{item?.id || ""}</td>
               <td>{item?.email || ""}</td>
               <td>{item?.firstName || ""}</td>

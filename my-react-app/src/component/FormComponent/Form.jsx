@@ -5,8 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FaPlus } from "react-icons/fa6";
 import axios from "axios";
 
-const FormComponent = ({ handleClose,updateTableData  }) => {
-
+const FormComponent = ({ handleClose, updateTableData }) => {
   const {
     register,
     handleSubmit,
@@ -93,7 +92,7 @@ const FormComponent = ({ handleClose,updateTableData  }) => {
             id="firstName"
             name="firstName"
             className="form-control"
-               placeholder="frist name"
+            placeholder="frist name"
             {...register("firstName", { required: "First Name is required" })}
           />
           {errors.firstName && (
@@ -103,14 +102,14 @@ const FormComponent = ({ handleClose,updateTableData  }) => {
 
         <div className=" mb-3">
           <label htmlFor="lastName" className="form-label">
-            Last Name {<span className="error">*</span>} 
+            Last Name {<span className="error">*</span>}
           </label>
           <input
             type="text"
             id="lastName"
             name="lastName"
             className="form-control"
-             placeholder="last name"
+            placeholder="last name"
             {...register("lastName", { required: "Last Name is required" })}
           />
           {errors.lastName && (
@@ -208,11 +207,8 @@ const FormComponent = ({ handleClose,updateTableData  }) => {
             <span className="error">{errors.email.message}</span>
           )}
         </div>
-        <div
-      
-          className="mb-3 d-flex flex-column align-start justify-start items-start ml-0"
-        >
-          <label   htmlFor="cordlimit">
+        <div className="mb-3 d-flex flex-column align-start justify-start items-start ml-0">
+          <label htmlFor="cordlimit">
             Card Load Limit {<span className="error">*</span>}
           </label>
           <input
@@ -239,7 +235,7 @@ const FormComponent = ({ handleClose,updateTableData  }) => {
             id="paymentlimit"
             name="paymentlimit"
             className="form-control"
-             placeholder="1000000"
+            placeholder="1000000"
             {...register("paymentlimit", {
               required: "Payment Limit is required",
             })}

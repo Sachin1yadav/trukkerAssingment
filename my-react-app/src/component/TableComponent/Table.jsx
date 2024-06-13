@@ -26,9 +26,7 @@ const UserTable = ({ tableData, updateTableData }) => {
           {tableData?.map((item, index) => (
             <tr key={index}>
               <td>
-                <div className="status">
-                {item?.status || ""}
-                </div>
+                <div className="status">{item?.status || ""}</div>
               </td>
               <td>{item?.id || ""}</td>
               <td>{item?.email || ""}</td>
@@ -50,12 +48,16 @@ const UserTable = ({ tableData, updateTableData }) => {
             </tr>
           ))}
         </tbody>
-     
       </table>
-      {tableData.length===0 && <div className="nodata">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBlIGhOg2L8L-Wi1Z0eAap2vnIUZCRDbn69Q&s" alt="" />
-            <p>No User ...</p>
-            </div>}
+      {tableData.length === 0 && (
+        <div className="nodata">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBlIGhOg2L8L-Wi1Z0eAap2vnIUZCRDbn69Q&s"
+            alt=""
+          />
+          <p>No User ...</p>
+        </div>
+      )}
     </div>
   );
 };

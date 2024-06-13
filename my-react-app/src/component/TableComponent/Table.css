@@ -1,0 +1,35 @@
+.example-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.example-table th,
+.example-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.example-table th {
+  background-color: #b5b5b5;
+  color: black;
+}
+
+.example-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.example-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.nodata {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+.tablecomponent{
+    border: 1px solid rgb(171, 167, 167);
+}

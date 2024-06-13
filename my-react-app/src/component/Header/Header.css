@@ -1,0 +1,19 @@
+.headersection {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.heading{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.setting{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 50px;
+    margin-top: 20px;
+}

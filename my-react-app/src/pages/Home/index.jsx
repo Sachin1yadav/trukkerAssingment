@@ -1,58 +1,30 @@
-import React, { useState, useEffect } from "react";
-import UserTable from "../../component/TableComponent/Table";
+import React from "react";
+import "./Home.css";
+import { useNavigate } from "react-router-dom";
+const HomePage = () => {
+  const nav = useNavigate();
+  let IsAuth = localStorage.getItem("token") || false;
 
- import { FaPlus } from "react-icons/fa6";
-import AddUserDrawer from "../AddUser/AddUserModal";
-
-const Home = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [tableData, setTableData] = useState([]);
-
-  useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem("formData")) || [];
-    console.log("storedData", storedData);
-    setTableData(storedData);
-  }, []);
-
-  const updateTableData = (data) => {
-    setTableData(data);
-    localStorage.setItem("formData", JSON.stringify(data));
+  const handelAuth = () => {
+    if (IsAuth) {
+      nav("/Salons");
+    } else {
+      nav("/login");
+    }
   };
-  const handleOpenDrawer = () => {
-    setIsDrawerOpen(true);
-  };
-
-  const handleCloseDrawer = () => {
-    setIsDrawerOpen(false);
-  };
-
   return (
-    <div className="container" style={{ width: "100%", margin: "10px auto" }}>
-      <div className="d-flex justify-content-between align-items-center mb-3">
-        <div>User List</div>
+    <div className="Homecontainer ">
+      <p> Book Your Slot!</p>
+      <p>Get Best Salon service as per your time!</p>
+      <button
+        onClick={handelAuth}
+        className="bg-red-300 font-bold space-x-2 rounded-full p-[10px] transition-transform duration-300 ease-in-out hover:scale-105"
 
-        <button
-          className="btn btn-success add-user-button"
-          onClick={handleOpenDrawer}
-        >
-          <FaPlus
-            style={{
-              marginRight: "5px",
-              verticalAlign: "middle",
-              marginBottom: "5px",
-            }}
-          />
-          Add New User
-        </button>
-      </div>
-      <UserTable tableData={tableData} updateTableData={updateTableData} />
-      <AddUserDrawer
-        isOpen={isDrawerOpen}
-        handleClose={handleCloseDrawer}
-        updateTableData={updateTableData}
-      />
+      >
+        Check Slots
+      </button>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
